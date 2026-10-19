@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Kartik’s Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside id="sb">
+        <div class="brand"><i></i><span class="lbl">Kartik’s Dashboard</span></div>
+        <nav id="nav"></nav>
+        <div class="demo lbl">Demo workspace · dummy data</div>
+      </aside>
+      <main>
+        <header>
+          <button class="btn" id="tg" aria-label="Toggle sidebar">☰</button>
+          <h1 id="ttl">Overview</h1>
+          <div class="srch">
+            <input id="q" placeholder="Search leads, quotes, deals, orders" autocomplete="off" />
+            <div class="res hide" id="res"></div>
+          </div>
+          <span id="rg"></span>
+          <span id="cr" class="hide"
+            ><input type="date" id="d1" /> – <input type="date" id="d2"
+          /></span>
+          <select id="fu" aria-label="User"></select
+          ><select id="fd" aria-label="Department">
+            <option value="">All Departments</option>
+            <option>Sales</option>
+            <option>Operations</option>
+          </select>
+          <button class="btn p" id="ex">Export CSV</button>
+        </header>
+        <div id="v"></div>
+      </main>
+    </div>
+    <dialog id="dg">
+      <div id="dgc"></div>
+      <p><button class="btn" onclick="dg.close()">Close</button></p>
+    </dialog>
+
+    <script src="js/dom.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/tables.js"></script>
+    <script src="js/views.js"></script>
+    <script src="js/actions.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
